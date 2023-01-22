@@ -1,10 +1,29 @@
 "use strict"; //запись для использования строгого стиля кода
 
-const hamburger = true;
-const fries = true;
+/**
+ * Циклы
+ */
 
-if(hamburger && fries){
-    console.log('I have eaten!');
+let num = 50;
+
+// while(num <= 55) {
+//     console.log(num);
+//     num++;
+// }
+
+do {
+    console.log(num);
+    num++;
 }
 
-console.log(hamburger && fries);
+while (num < 55);
+
+
+for(let i = 1; i < 10; i++) {
+    if(i === 6) {
+        // break;
+        continue;
+    }
+
+    console.log(i);
+}
