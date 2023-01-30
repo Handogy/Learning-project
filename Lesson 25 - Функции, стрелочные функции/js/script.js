@@ -23,10 +23,10 @@ showFirstMessage("Hello world!");
 console.log(num);
 
 
-function calc(a, b) {
-    return (a + b);
-}
-console.log(calc(4, 3));
+// function calc(a, b) {
+//     return (a + b);
+// }
+// console.log(calc(4, 3));
 
 function ret() {
     let num = 10;
