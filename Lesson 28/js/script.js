@@ -6,64 +6,35 @@
  * Don't repeat yourself
  */
 
-
-const usdCurr = 28;
-const discount = 0.9;
-
-function convert(amount, curr) {
-    return curr * amount;
-}
-
-function promotion(result) {
-    console.log(result * discount);
-}
-
-const res = convert(500, usdCurr);
-
-promotion(res);
-
-
-function test() {
-    for (let i = 0; i < 5; i++) {
-        console.log(i);
-        if(i === 3) return;
-    }
-
-    console.log("Done");
-}
-
-test();
-
-
-function doNothing() {}
-
-console.log(doNothing() === undefined);
-
-
-
 /**
- * Lesson 27 - Homework
+ * Методы и свойства строк и чисел
  */
-function getMathResult(base, count) {
-    let result = '';
 
-    if (typeof count === 'number') {
-        for (let i = 1; i <= count; i++) {
-            if (i != count) {
-                result += `${(base * i)}---`;
-            } else if(i == 1) {
-                result += `${base}`;
-            } else {
-                result += base * i;
-            }
-            
-        }
-    } else {
-        return base;
-    }
-
-    return result;
-}
+const str = "test";
 
 
-console.log(getMathResult(2, ''));
+// Изменение регистра
+console.log(str.toUpperCase());
+
+console.log(str);
+
+// Найти часть строки и узнать индекс откуда начинается
+const fruit = "Some fruit";
+console.log(fruit.indexOf('frui'));
+
+const logg = "Hello world!";
+
+// console.log(logg.slice(6, 11));
+
+// console.log(logg.substring(6, 11));
+
+console.log(logg.substr(6, 10));
+
+
+const num = 12.2;
+console.log(Math.round(num));
+
+
+const test = '12.2px';
+console.log(parseInt(test));
+console.log(parseFloat(test));
