@@ -126,3 +126,27 @@ function findMaxNumber(a, b, c, d) {
 }
 
 console.log(findMaxNumber(1, 2, 3, 9));
+
+function fib(count) {
+    let result = '0';
+
+    if (typeof (count) != 'number' || !Number.isInteger(count) || count === 0) return "";
+
+    if (count === 1 ) return "0";
+    
+
+    let prevPrev = 0;
+    let Prev = 1;
+    result = '0 1';
+    for (let i = 2; i < count; i++) {
+        const sum = prevPrev + Prev;
+        result += ' ';
+        result += sum;
+        prevPrev = Prev;
+        Prev = sum;
+    }
+
+    return result;
+}
+
+console.log(fib('7'));
