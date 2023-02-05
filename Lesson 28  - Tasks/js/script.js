@@ -102,24 +102,24 @@ function getTimeFromMinutes(minutes) {
 console.log(getTimeFromMinutes(0));
 
 
-function findMaxNumber(num1, num2, num3, num4) {
-    if ((!num1, !num2, !num3, !num4) || (num1, num2, num3, num4) == '' || typeof (num1, num2, num3, num4) != 'number' ) {
+function findMaxNumber(a, b, c, d) {
+    if ((!a, !b, !c, !d) || (a, b, c, d) == '' || typeof (a, b, c, d) != 'number' ) {
         return 0;
     }
 
     let result = '';
-    if (num1 > num2) {
-        result = num1;
+    if (a > b) {
+        result = a;
     } else{
-        result = num2;
+        result = b;
     }
 
-    if (result < num3) {
-        result = num3;
+    if (result < c) {
+        result = c;
     }
 
-    if (result < num4) {
-        result = num4;
+    if (result < d) {
+        result = d;
     }
 
     return result;
