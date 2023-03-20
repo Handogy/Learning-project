@@ -23,4 +23,38 @@ changeParams(box, newHeight, newWidth);
 let userName;
 let userKey;
 
-console.log(userName ?? userKey ?? 'User');
+// console.log(userName ?? userKey ?? 'User');
+
+
+/**
+ * Optional chaining operator
+ * ?.
+ */
+const block = document.querySelector('.block');
+
+console.log(block);
+
+// if (block) {
+//     console.log(block.textContent);
+// }
+
+console.log(block?.textContent); // работает только на чтение свойства
+
+console.log(1 + 2);
+
+const userData = {
+    name: 'Ivan',
+    age: null,
+    say: function() {
+        console.log("Hello");
+    }
+};
+
+userData.say();
+userData.hey?.();
+
+// if (userData && userData.skills && userData.skills.js) {
+//     console.log(userData.skills.js);
+// }
+
+console.log(userData.skills?.js);
