@@ -32,15 +32,15 @@ let userKey;
  */
 const block = document.querySelector('.block');
 
-console.log(block);
+// console.log(block);
 
 // if (block) {
 //     console.log(block.textContent);
 // }
 
-console.log(block?.textContent); // работает только на чтение свойства
+// console.log(block?.textContent); // работает только на чтение свойства
 
-console.log(1 + 2);
+// console.log(1 + 2);
 
 const userData = {
     name: 'Ivan',
@@ -50,11 +50,29 @@ const userData = {
     }
 };
 
-userData.say();
+// userData.say();
 userData.hey?.();
 
 // if (userData && userData.skills && userData.skills.js) {
 //     console.log(userData.skills.js);
 // }
 
-console.log(userData.skills?.js);
+// console.log(userData.skills?.js);
+
+
+/**
+ * Lesson 55
+ * Живые коллекции и полезные методы
+ */
+
+const boxesQuery = document.querySelectorAll('.box');
+const boxesGet = document.getElementsByClassName('box');
+
+// console.log(boxesQuery);
+// console.log(boxesGet);
+
+boxesQuery.forEach(box => {
+    if (box.matches('.this')) console.log(box);
+});
+
+console.log(boxesQuery[0].closest('.wrapper'));
