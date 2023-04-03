@@ -111,8 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modalTrigger.forEach(modalBtn => {
         modalBtn.addEventListener('click', () => {
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
+            openModal();
         });
     });
 
@@ -128,6 +127,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    function openModal() {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+
+        // clearInterval(modalTimerId);
+    }
+
     function closeModal() {
         modal.style.display = 'none';
         document.body.style.overflow = '';
@@ -137,5 +143,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.code === "Escape" && modal.style.display === 'block') {
             closeModal();
         }
-    })
+    });
+
+    // const modalTimerId = setTimeout(openModal, 5000);
+
+
+    window.addEventListener('scroll', showModalByScroll);
+
+    function showModalByScroll() {
+        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight - 1) {
+            openModal();
+            window.removeEventListener('scroll', showModalByScroll);
+        }
+    }
 });
