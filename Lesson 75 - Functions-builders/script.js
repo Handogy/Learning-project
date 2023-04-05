@@ -11,7 +11,7 @@ function User(name, id) {
 
 User.prototype.exit = function(name) {
     console.log(`User ${this.name} has left`);
-}
+};
 
 // class User {
 //     constructor(name, id) {
